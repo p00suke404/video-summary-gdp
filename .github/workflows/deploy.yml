@@ -31,7 +31,7 @@ jobs:
       # --- video_transcriber ---
       - name: Deploy video_transcriber
         run: |
-          cd video_transcriber/lambda
+          cd video-transcriber/lambda
           mkdir -p package
           cp lambda_function.py package/
           cd package
