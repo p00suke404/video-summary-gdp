@@ -49,12 +49,18 @@ def lambda_handler(event, context):
         # 文字起こし
         result_text = transcribe_audio(audio_path, api_key)
 
+        # ログ出力（CloudWatchで確認できる！）
+        print("==== Transcription Result ====")
+        print(result_text)
+        print("==============================")
+
         return {
             "statusCode": 200,
             "body": result_text
         }
 
     except Exception as e:
+        print("Error:", str(e))
         return {
             "statusCode": 500,
             "body": f"Error: {str(e)}"
