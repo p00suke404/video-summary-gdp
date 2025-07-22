@@ -32,6 +32,7 @@ def transcribe_audio(file_path, api_key):
 
 # --- Lambdaハンドラー ---
 def lambda_handler(event, context):
+    print(os.listdir("/opt/bin"))  # ← これで中身が確認できる！
     try:
         youtube_url = event.get("youtube_url")
         if not youtube_url:
