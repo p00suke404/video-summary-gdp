@@ -41,4 +41,3 @@ jobs:
           aws lambda update-function-code \
             --function-name video_transcriver \
             --zip-file fileb://function.zip
-            
